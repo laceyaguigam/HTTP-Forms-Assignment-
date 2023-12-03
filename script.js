@@ -19,11 +19,18 @@
 //greet users, when user visits page
     //id= "greeting" for the greeting at the top of the page?
    
-let greeting = document.getElementById("greeting");    
+let greeting = document.getElementById("greeting");   //doesnt work 
+greeting.innerText += localStorage.getItem("name");
+
 
     //id="name" for the text input field
 
 let textInput = document.getElementById("name");   
+
+
+
+
+                    //THIS WORKS!!!!!!!
 
 
 //color picker to choose background 
@@ -31,11 +38,25 @@ let textInput = document.getElementById("name");
 let bg = document.getElementById("background-color");
 bg.addEventListener('input', () => {
    document.body.style.backgroundColor = bg.value 
+    localStorage.setItem("background-color"); //not sure if this is right 
 });
+
+
+
+                //DOES NOT WORK!!!
 
 
 //color picker to choose foreground
     //id="foreground-color" for the foreground picker
+// let fg = document.getElementById("foreground-color");
+// fg.addEventListener('input', () => {
+//     document.style.color = fg.value
+// });
+
+
+
+
+                    // THIS WORKS!!!!!!
 
 
 //when form submitted, prevent default 
@@ -50,9 +71,13 @@ form.addEventListener("submit", event => {
    
 
 
+
+
+
+
 //store info in local storage 
 greeting.innerText += localStorage.getItem("name");
-
+// bg.value += localStorage.getItem("background-color"); //not sure if this is right
 
 //write function to apply preferences 
 function applyPreference() {
