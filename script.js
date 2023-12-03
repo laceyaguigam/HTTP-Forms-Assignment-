@@ -20,6 +20,7 @@
     //id= "greeting" for the greeting at the top of the page?
    
 let greeting = document.getElementById("greeting");    
+
     //id="name" for the text input field
 
 let textInput = document.getElementById("name");   
@@ -39,6 +40,7 @@ let form = document.querySelector("form");
 form.addEventListener("submit", event => {
     event.preventDefault();
     console.log("textInput.value"); //works but is it supposed to produce the value of the name that the user input? 
+    alert("Your preferences have been saved!");
 });
 
    
@@ -49,7 +51,9 @@ greeting.innerText += localStorage.getItem("name");
 
 
 //write function to apply preferences 
+function applyPreference() {
 
+}
 //call function again when user saves preferences and apply them 
 
 //notify user when preferences are saved
