@@ -37,7 +37,7 @@ let textInput = document.getElementById("name");
 let form = document.querySelector("form");
 form.addEventListener("submit", event => {
     event.preventDefault();
-    console.log(""); //add the value for the text input
+    console.log("textInput.value"); //add the value for the text input
 });
 
     //id="submit" for submit button 
