@@ -34,17 +34,18 @@ let textInput = document.getElementById("name");
 
 
 //when form submitted, prevent default 
+ //id="submit" for submit button 
 let form = document.querySelector("form");
 form.addEventListener("submit", event => {
     event.preventDefault();
     console.log("textInput.value"); //works but is it supposed to produce the value of the name that the user input? 
 });
 
-    //id="submit" for submit button 
+   
 
 
 //store info in local storage 
-
+greeting.innerText += localStorage.getItem("name");
 
 
 //write function to apply preferences 
