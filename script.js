@@ -18,9 +18,11 @@
 
 //greet users, when user visits page
     //id= "greeting" for the greeting at the top of the page?
+   
+let greeting = document.getElementById("greeting");    
     //id="name" for the text input field
 
-let textInput = document.getElementById("name");
+let textInput = document.getElementById("name");   
 
 
 //color picker to choose background 
