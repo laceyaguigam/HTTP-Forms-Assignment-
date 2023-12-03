@@ -28,6 +28,10 @@ let textInput = document.getElementById("name");
 
 //color picker to choose background 
     //id="background-color" for the background color picker 
+let bg = document.getElementById("background-color");
+bg.addEventListener('input', () => {
+   document.body.style.backgroundColor = bg.value 
+});
 
 
 //color picker to choose foreground
@@ -40,7 +44,7 @@ let form = document.querySelector("form");
 form.addEventListener("submit", event => {
     event.preventDefault();
     console.log("textInput.value"); //works but is it supposed to produce the value of the name that the user input? 
-    alert("Your preferences have been saved!");
+    alert("Your preferences have been saved!"); //alerts user that preferences were saved when form submitted
 });
 
    
@@ -56,4 +60,4 @@ function applyPreference() {
 }
 //call function again when user saves preferences and apply them 
 
-//notify user when preferences are saved
+
