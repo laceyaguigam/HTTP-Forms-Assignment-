@@ -33,9 +33,13 @@ let textInput = document.getElementById("name");
     //id="foreground-color" for the foreground picker
 
 
-//when for submitted, prevent default 
+//when form submitted, prevent default 
+let form = document.querySelector("form");
+form.addEventListener("submit", event => {
+    event.preventDefault();
+    console.log(""); //add the value for the text input
+});
 
-event.preventDefault();
     //id="submit" for submit button 
 
 
