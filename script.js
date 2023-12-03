@@ -20,6 +20,9 @@
     //id= "greeting" for the greeting at the top of the page?
     //id="name" for the text input field
 
+let textInput = document.getElementById("name");
+
+
 //color picker to choose background 
     //id="background-color" for the background color picker 
 
