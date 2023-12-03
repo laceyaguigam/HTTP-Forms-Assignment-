@@ -34,6 +34,8 @@ let textInput = document.getElementById("name");
 
 
 //when for submitted, prevent default 
+
+event.preventDefault();
     //id="submit" for submit button 
 
 
