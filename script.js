@@ -17,15 +17,24 @@
 
 
 //greet users, when user visits page
+    //id= "greeting" for the greeting at the top of the page?
+    //id="name" for the text input field
 
 //color picker to choose background 
+    //id="background-color" for the background color picker 
+
 
 //color picker to choose foreground
+    //id="foreground-color" for the foreground picker
 
 
 //when for submitted, prevent default 
+    //id="submit" for submit button 
+
 
 //store info in local storage 
+
+
 
 //write function to apply preferences 
 
