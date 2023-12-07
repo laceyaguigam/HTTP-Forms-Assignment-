@@ -48,10 +48,10 @@ bg.addEventListener('input', () => {
 
 //color picker to choose foreground
     //id="foreground-color" for the foreground picker
-// let fg = document.getElementById("foreground-color");
-// fg.addEventListener('input', () => {
-//     document.style.color = fg.value
-// });
+ let fg = document.getElementById("foreground-color");
+    fg.addEventListener('input', () => {
+     document.style.color = fg.value
+ });
 
 
 
@@ -64,8 +64,15 @@ bg.addEventListener('input', () => {
 let form = document.querySelector("form");
 form.addEventListener("submit", event => {
     event.preventDefault();
-    console.log("textInput.value"); //works but is it supposed to produce the value of the name that the user input? 
+    console.log("name: " + name.value);
+    console.log("background-color: " + background.value);
+    console.log("foreground-color " + foreground.value); 
     alert("Your preferences have been saved!"); //alerts user that preferences were saved when form submitted
+
+    localStorage.setItem('name', name.value);    //(key (how you name your variables), value (the value variable given))
+    localStorage.setItem('background', background.value);  
+    localStorage.setItem('foreground', foreground.value);  
+
 });
 
    
@@ -75,14 +82,18 @@ form.addEventListener("submit", event => {
 
 
 
-//store info in local storage 
-greeting.innerText += localStorage.getItem("name");
-// bg.value += localStorage.getItem("background-color"); //not sure if this is right
+
 
 //write function to apply preferences 
 function applyPreference() {
 
 }
-//call function again when user saves preferences and apply them 
 
+
+
+//in class notes 
+
+const name =document.getElementById('name');
+const bg = document.getElementById('background-color');
+const fg = document.getElementById('foreground-color');
 
