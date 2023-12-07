@@ -56,6 +56,7 @@
 const name = document.getElementById('name');
 const background = document.getElementById('background-color');
 const foreground = document.getElementById('foreground-color');
+const body = document.querySelector('body');
 
 
                     // THIS WORKS!!!!!!
@@ -67,8 +68,8 @@ let form = document.querySelector("form");
 form.addEventListener("submit", event => {
     event.preventDefault();
     console.log("name: " + name.value);
-    console.log("background-color: " + background.value);
-    console.log("foreground-color " + foreground.value); 
+    console.log("background: " + background.value);
+    console.log("foreground: " + foreground.value); 
     alert("Your preferences have been saved!"); //alerts user that preferences were saved when form submitted
 
     localStorage.setItem('name', name.value);    //(key (how you name your variables), value (the value variable given))
@@ -79,21 +80,17 @@ form.addEventListener("submit", event => {
 
    
 
-
-
-
-
-
-
-
 //write function to apply preferences 
 function applyPreference() {
 
     // name.value = localStorage.getItem("name");
     greeting.textContent(localStorage.getItem("name"));
-    body.background.style.backgroundColor = localStorage.getItem("background");
-    body..style.foregroundColor = localStorage.getItem("foreground");
+    body.style.backgroundColor = localStorage.getItem("background");
+    body.style.color = localStorage.getItem("foreground");
 
+    name.value = localStorage.getItem("name");
+    background.value = localStorage.getItem("background");
+    foreground.value = localStorage.getItem("foreground");
 }
 
 window.onload = (event)  => {
