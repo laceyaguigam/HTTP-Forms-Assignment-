@@ -19,13 +19,13 @@
 //greet users, when user visits page
     //id= "greeting" for the greeting at the top of the page?
    
-let greeting = document.getElementById("greeting");   //doesnt work 
-greeting.innerText += localStorage.getItem("name");
+// let greeting = document.getElementById("greeting");   //doesnt work 
+// greeting.innerText += localStorage.getItem("name");
 
 
     //id="name" for the text input field
 
-let textInput = document.getElementById("name");   
+// let textInput = document.getElementById("name");   
 
 
 
@@ -35,11 +35,11 @@ let textInput = document.getElementById("name");
 
 //color picker to choose background 
     //id="background-color" for the background color picker 
-let bg = document.getElementById("background-color");
-bg.addEventListener('input', () => {
-   document.body.style.backgroundColor = bg.value 
-    localStorage.setItem("background-color"); //not sure if this is right 
-});
+// let bg = document.getElementById("background-color");
+// bg.addEventListener('input', () => {
+//    document.body.style.backgroundColor = bg.value 
+//     localStorage.setItem("background-color"); //not sure if this is right 
+// });
 
 
 
@@ -48,12 +48,14 @@ bg.addEventListener('input', () => {
 
 //color picker to choose foreground
     //id="foreground-color" for the foreground picker
- let fg = document.getElementById("foreground-color");
-    fg.addEventListener('input', () => {
-     document.style.color = fg.value
- });
+//  let fg = document.getElementById("foreground-color");
+//     fg.addEventListener('input', () => {
+//      document.style.color = fg.value
+//  });
 
-
+const name = document.getElementById('name');
+const background = document.getElementById('background-color');
+const foreground = document.getElementById('foreground-color');
 
 
                     // THIS WORKS!!!!!!
@@ -72,7 +74,7 @@ form.addEventListener("submit", event => {
     localStorage.setItem('name', name.value);    //(key (how you name your variables), value (the value variable given))
     localStorage.setItem('background', background.value);  
     localStorage.setItem('foreground', foreground.value);  
-
+    applyPreference();
 });
 
    
@@ -87,13 +89,22 @@ form.addEventListener("submit", event => {
 //write function to apply preferences 
 function applyPreference() {
 
+    // name.value = localStorage.getItem("name");
+    greeting.textContent(localStorage.getItem("name"));
+    body.background.style.backgroundColor = localStorage.getItem("background");
+    body..style.foregroundColor = localStorage.getItem("foreground");
+
 }
 
-
+window.onload = (event)  => {
+    applyPreference();
+}
 
 //in class notes 
 
-const name =document.getElementById('name');
-const bg = document.getElementById('background-color');
-const fg = document.getElementById('foreground-color');
+// const name =document.getElementById('name');
+// const bg = document.getElementById('background-color');
+// const fg = document.getElementById('foreground-color');
 
+// //greeting
+// const greeting = getElementById('greeeting');
